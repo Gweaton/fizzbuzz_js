@@ -28,4 +28,18 @@ describe('Javabuzz', function() {
       expect(javabuzz.isDivisibleByThreeAndFive(1)).toBe(false);
     });
   });
+  describe('when playing, says', function() {
+    it ('"FizzBuzz" when a number is divisible by 15', function() {
+      expect(javabuzz.says(15)).toEqual("FizzBuzz");
+    });
+    it ('"Buzz" when a number is divisible by 5', function() {
+      expect(javabuzz.says(5)).toEqual("Buzz");
+    });
+    it ('"Fizz" when a number is divisible by 3', function() {
+      expect(javabuzz.says(3)).toEqual("Fizz");
+    });
+    it ('"any other number"', function() {
+      expect(javabuzz.says(1)).toEqual(1);
+    });
+  });
 });
