@@ -1,12 +1,5 @@
-function fizzBuzz(number){
-  this.number = number
-  return number
-}
+var Javabuzz = function() {};
 
-fizzBuzz.prototype.isDivisibleBy = function(divisor, number) {
-  if (number % divisor === 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
+Javabuzz.prototype.isDivisibleByThree = function(number) {
+  return (number % 3 === 0)
+};

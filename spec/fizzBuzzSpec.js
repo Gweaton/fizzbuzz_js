@@ -1,49 +1,18 @@
-describe("fizzBuzz", function(){
-  var fizzbuzz;
+describe('Javabuzz', function() {
 
-  beforeEach(function(){
-    fizzbuzz = new fizzBuzz();
-  });
+  var javabuzz;
 
-  describe("is_divisible_by", function() {
-
-    it("should be able to return 1", function(){
-      var number = 1;
-      expect(fizzBuzz(number)).toEqual(number);
-    });
-
-    it("should know if the number is divisible by 3", function(){
-      var number = 3;
-      expect(fizzbuzz.isDivisibleBy(3, number)).toEqual(true);
-    });
-    it("should know if the number is not divisible by 3", function(){
-      var number = 4;
-      expect(fizzbuzz.isDivisibleBy(3, number)).toEqual(false);
-    });
-
-    it("should know if the number is divisible by 5", function(){
-      var number = 5;
-      expect(fizzbuzz.isDivisibleBy(5, number)).toEqual(true);
-    });
-    it("should know if the number is not divisible by 5", function(){
-      var number = 7;
-      expect(fizzbuzz.isDivisibleBy(5, number)).toEqual(false);
-    });
-
-    it("should know if the number is divisible by 3 and 5", function() {
-      var number = 15;
-      expect(fizzbuzz.isDivisibleBy(15, number)).toEqual(true);
-    });
-
-    it("should know if the number is not divisible by 3 and 5", function() {
-      var number = 14;
-      expect(fizzbuzz.isDivisibleBy(15, number)).toEqual(false);
+  describe('knows when a number is', function() { // context block
+    it ('divisible by 3', function() {
+      javabuzz = new Javabuzz(); // creates a new instance of Javabuzz
+      expect(javabuzz.isDivisibleByThree(3)).toBe(true);
     });
   });
-  describe("fizz", function() {
-    it("should return fizz when passed a multiple of 3", function() {
-      var number = 3;
-      expect(fizzbuzz.says(number).toEqual('fizz');
+  describe('knows when a number is NOT', function() {
+    it ('divisible by 3', function() {
+      javabuzz = new Javabuzz();
+      expect(javabuzz.isDivisibleByThree(1)).toBe(false);
     });
-    });
+  });
+  
 });
